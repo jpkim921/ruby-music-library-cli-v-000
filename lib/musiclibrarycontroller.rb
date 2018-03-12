@@ -41,7 +41,7 @@ class MusicLibraryController
 
 
     def list_songs
-      # lists ALL songs in alphabetical order
+      # lists ALL songs in alphabetical order, not sure why i thought only a select amout were
         arr = Song.all.sort_by{|song| song.name}
         arr.each_with_index do |song, idx|
           puts "#{idx + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
